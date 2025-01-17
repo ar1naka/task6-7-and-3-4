@@ -1,0 +1,440 @@
+@font-face {
+    font-family: "MTS";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/font/MTSWide-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "MTS-comp";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/font/MTSCompact.woff2") format("woff2");
+}
+
+.desktop-nav {
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+.desktop-nav__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.desktop-nav__menu-button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.desktop-nav__menu-button span {
+    margin-right: 4px;
+}
+
+.desktop-nav__menu-button .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.desktop-nav__menu-button:hover,
+.desktop-nav__menu-button:focus {
+    color: red;
+}
+
+.desktop-nav__checkbox {
+    display: none;
+}
+
+.aside-list {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    width: max-content;
+}
+
+
+.desktop-nav__checkbox:checked ~ form .aside-list {
+    display: grid;
+    grid-template-columns: 22.75% 76%;
+    align-items: start;
+    margin-top: 20px;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 1000px;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.desktop-nav__checkbox:checked ~ form .aside-list label {
+    grid-column: 1;
+}
+
+.desktop-nav__checkbox:checked ~ form .aside-list h1 {
+    grid-column: 1;
+    margin-left: 20px;
+}
+
+.aside-list h1 {
+    font-family: "MTS", sans-serif;
+}
+
+.desktop-nav__menu-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.desktop-nav__menu-button span {
+    font-family: "MTS", sans-serif;
+}
+
+.desktop-nav__menu-button .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-left: 4px;
+}
+
+.aside-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aside-list ul {
+    list-style: none;
+    margin-top: 0;
+}
+
+.aside-list label {
+    width: 215px;
+    height: max-content;
+}
+
+.content-list {
+    margin: 0;
+}
+
+.aside-radio {
+    display: none;
+}
+
+.aside-list label {
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-family: MTS-comp, sans-serif;
+}
+
+.aside-list label:hover {
+    background-color: #eaeaea;
+}
+
+.content-list {
+    display: none;
+    padding-left: 10px;
+    top: 0;
+    min-width: 500px;
+    background: #fff;
+    max-height: 500px;
+    height: max-content;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.aside-radio:checked ~ label,
+.aside-radio:checked ~ input {
+    grid-column: 1;
+}
+
+.aside-radio:checked + label {
+    background-color: #1d2023;
+    color: whitesmoke;
+}
+.wrapper h1 {
+    display: none;
+}
+
+.wrapper .iaas-list,
+.wrapper .saas-list,
+.wrapper .dbaas-list,
+.wrapper .secaas-list,
+.wrapper .naas-list,
+.wrapper .ai-list
+{
+    grid-template-columns: repeat(2, 1fr);
+    width: 47rem;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    column-gap: 50px;
+}
+
+/*#iaas-toggle:checked ~ .wrapper .iaas-list,*/
+/*#saas-toggle:checked ~ .wrapper .saas-list,*/
+/*#dbaas-toggle:checked ~ .wrapper .dbaas-list,*/
+/*#secaas-toggle:checked ~ .wrapper .secaas-list,*/
+/*#naas-toggle:checked ~ .wrapper .naas-list,*/
+/*#ai-toggle:checked ~ .wrapper .ai-list{*/
+/*    display: grid;*/
+/*}*/
+
+.wrapper .name-iaas,
+.wrapper .name-saas,
+.wrapper .name-dbaas,
+.wrapper .name-secaas,
+.wrapper .name-naas,
+.wrapper .name-ai {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    margin-top: -40px;
+    font-family: "MTS", monospace;
+}
+
+.item__subtitle {
+    font-family: MTS-comp, sans-serif;
+}
+
+
+/*#iaas-toggle:checked ~ .wrapper .name-iaas,*/
+/*#saas-toggle:checked ~ .wrapper .name-saas,*/
+/*#dbaas-toggle:checked ~ .wrapper .name-dbaas,*/
+/*#secaas-toggle:checked ~ .wrapper .name-secaas\",*/
+/*#naas-toggle:checked ~ .wrapper .name-naas\",*/
+/*#ai-toggle:checked ~ .wrapper .name-ai\"*/
+/*{*/
+/*    display: block;*/
+/*}*/
+
+.aside-radio:checked ~ .wrapper {
+    grid-column: 2;
+    margin-top: -39%;
+}
+
+.icon,
+.desktop-nav__menu-button span,
+.desktop-nav__list-item a
+{
+    transition: transform 0.3s ease, fill 0.3s ease, color 0.3s ease;
+    font-family: sans-serif;
+}
+
+#products-toggle:checked + .desktop-nav__menu-button .icon,
+#service-toggle:checked + .desktop-nav__menu-button .icon,
+#event-toggle:checked + .desktop-nav__menu-button .icon,
+#help-toggle:checked + .desktop-nav__menu-button .icon
+{
+    transform: rotate(180deg);
+    color: red;
+}
+
+#products-toggle:checked + .desktop-nav__menu-button span,
+#service-toggle:checked + .desktop-nav__menu-button span,
+#event-toggle:checked + .desktop-nav__menu-button span,
+#help-toggle:checked + .desktop-nav__menu-button span
+{
+    color: red;
+}
+
+.content-list__item {
+    padding-top: 10px;
+}
+
+.content-list__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.content-list__item {
+    margin: 10px;
+    padding: 10px;
+}
+
+.content-list__item:hover {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.content-list__item img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.item__title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-family: "MTS",sans-serif;
+
+}
+
+@media (max-width: 1000px) {
+    .desktop-nav__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .desktop-nav__list-item {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .desktop-nav__checkbox:checked ~ form .aside-list h1 {
+        display: none;
+    }
+
+    .aside-radio:checked + label {
+        background-color: white;
+        color: black;
+    }
+
+    .aside-list label {
+        width: 500px;
+        height: 50px;
+    }
+
+    .aside-radio ~ label:before {
+        content: "+";
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 2rem;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .aside-radio:checked + label:before {
+        content: "−";
+        transform: rotate(180deg);
+    }
+
+    .desktop-nav__menu-button {
+        justify-content: space-between;
+        width: 100%;
+        font-size: 18px;
+        padding: 15px 0;
+    }
+
+    .aside-list {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        display: none;
+    }
+    .desktop-nav__checkbox:checked ~ form .aside-list {
+        max-height: none;
+        transition: opacity 0.3s ease-in-out;
+
+    }
+    /*#iaas-toggle + label,*/
+    /*#iaas-toggle:checked ~ .wrapper*/
+    /*{*/
+    /*    order: 0*/
+    /*}*/
+
+    /*#saas-toggle + label,*/
+    /*#saas-toggle:checked ~ .wrapper*/
+    /*{*/
+    /*    order: 1;*/
+    /*}*/
+
+    /*#dbaas-toggle + label,*/
+    /*#dbaas-toggle:checked ~ .wrapper*/
+    /*{*/
+    /*    order: 2;*/
+    /*}*/
+
+    /*#secaas-toggle + label,*/
+    /*#secaas-toggle + label,*/
+    /*#secaas-toggle:checked ~ .wrapper*/
+    /*{*/
+    /*    order: 3;*/
+    /*}*/
+
+    /*#naas-toggle + label,*/
+    /*#naas-toggle:checked ~ .wrapper*/
+    /*{*/
+    /*    order: 4;*/
+    /*}*/
+
+    /*#ai-toggle + label,*/
+    /*#ai-toggle:checked ~ .wrapper*/
+    /*{*/
+    /*    order: 5;*/
+    /*}*/
+
+
+    .aside-radio:checked ~ .wrapper {
+        margin-top: 0;
+    }
+
+
+    .wrapper h1 {
+        display: none;
+    }
+
+    .aside-radio:checked ~ .wrapper {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .content-list
+    {
+        max-height: 1000px;
+        font-size: 10px;
+    }
+
+    .wrapper .iaas-list,
+    .wrapper .saas-list,
+    .wrapper .dbaas-list,
+    .wrapper .secaas-list,
+    .wrapper .naas-list,
+    .wrapper .ai-list {
+        /*display: block;*/
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .name-iaas,
+    .name-saas,
+    .name-dbaas,
+    .name-secaas,
+    .name-naas,
+    .name-ai {
+        display: none !important;
+    }
+
+    .content-list__item img {
+        display: none;
+    }
+}
